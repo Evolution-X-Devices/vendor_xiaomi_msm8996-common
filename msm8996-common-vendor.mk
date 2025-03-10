@@ -59,8 +59,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@1.0-service.rc \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/perf/perf-profile1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile1.conf \
@@ -117,6 +119,7 @@ PRODUCT_PACKAGES += \
     libadsprpc \
     libbccQTI \
     libc2d30_bltlib \
+    libdapparamstorage \
     libdiag \
     libdsi_netctrl \
     libdsutils \
@@ -284,12 +287,16 @@ PRODUCT_PACKAGES += \
     libtm_interface \
     libubifocus \
     libvpplibrary \
+    vendor.dolby.hardware.dms@2.0 \
     libvqzip \
     libasphere \
     libqcbassboost \
     libqcreverb \
     libqcvirt \
     libshoebox \
+    libswdap \
+    libswgamedap \
+    libswvqe \
     com.qualcomm.qti.ant@1.0_vendor \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@1.0 \
@@ -327,7 +334,9 @@ PRODUCT_PACKAGES += \
     libcneqmiutils \
     libconfigdb \
     libdataitems \
+    libdeccfg \
     libdisp-aba \
+    libdlbdsservice \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
@@ -370,6 +379,8 @@ PRODUCT_PACKAGES += \
     libsettings \
     libslimclient \
     libssd \
+    libstagefright_soft_ac4dec \
+    libstagefright_soft_ddpdec \
     libsystem_health_mon \
     libthermalioctl \
     libtime_genoff \
@@ -386,6 +397,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.hardware.dms@2.0-impl \
     vendor.qti.data.factory@1.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.gnss@3.0-service \
@@ -485,6 +497,7 @@ PRODUCT_PACKAGES += \
     qcrilhook \
     ReferenceFeature.xml \
     manifest_android.hardware.drm@1.2-service.widevine.xml \
+    manifest_vendor.dolby.hardware.dms.xml \
     vendor.qti.gnss@3.0-service.xml \
     ATFWD-daemon \
     adpl \
@@ -498,6 +511,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2-service.widevine \
     qcrild \
     vendor.display.color@1.0-service \
+    vendor.dolby.hardware.dms@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.perf@1.0-service \
     ims_rtp_daemon \
